@@ -4,7 +4,7 @@ import "./styleNavigation.css"
 import { Link } from "react-router-dom";
 import { useCart } from "../../Providers/cartProvider/cartProvider";
 
-const styleHeaderBox="header sticky top-0 h-14 flex items-center justify-between p-3 bg-black text-white";
+const styleHeaderBox="header sticky top-0 h-14 flex items-center justify-between p-3 bg-black text-white z-10";
 
 const Navigation = () => {
   const {cart} =useCart()

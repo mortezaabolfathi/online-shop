@@ -4,6 +4,8 @@ import * as data from "./../data";
 import {useCart, useCartActionS} from "../Providers/cartProvider/cartProvider"
 import { checkInCart } from '../Utils/Utils';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 
@@ -12,13 +14,20 @@ const ProductPage = () => {
   const [selectItem,setSelectItem]=useState([])
 
   const dispatch=useCartActionS()
+
+
   const addProductInCart=(product)=>{
     dispatch({type:"ADD_TO_CART", payload:product})
     toast.info(`${product.name}  به سبد خرید افزوده شد`)
   }
   
+  const getData=()=>{
+    axios.get("http://localhost:3001/products").then((res)=>{
+      setSelectItem(res.data)
+    })
+  }
   useEffect(()=>{
-    setSelectItem(data.products)
+    getData()
   },[])
 
   const changeHandlerSelect=(e)=>{
@@ -99,20 +108,24 @@ const ProductPage = () => {
           <section className='productList'>{selectItem.map((product)=>{
             return (
               
-              <section className='product' key={product.id}>
-                <div className='productImg'>
-                  <img src={product.image} alt={product.name} />
-                </div>
-                <div>
-                  <button onClick={()=>addProductInCart(product)}>
-                    {checkInCart(cart,product) ? "به سبد خرید افزوده شد" : "افزودن به سبد خرید"}
-                  </button>
-                  <p>{product.name}</p>
-                  <p className='text-xl'>قیمت: {product.price} $</p>
-                </div>
-              </section>
+                <section className='product' key={product.id} >
+                  <div className='productImg  '>
+                  <Link to="/offLinShop"> 
+                    <img src={product.image} alt={product.name} />
+                  </Link>
+                  </div>
+                  <div>
+                    <button onClick={()=>addProductInCart(product)}>
+                      {checkInCart(cart,product) ? "به سبد خرید افزوده شد" : "افزودن به سبد خرید"}
+                    </button>
+                    <p>{product.name}</p>
+                    <p className='text-xl'>قیمت: {product.price} $</p>
+                  </div>
+                </section>
+          
             )
-          })}</section>
+          })}
+          </section>
         </main>
      );
 }

@@ -10,7 +10,7 @@ import { useQuery } from "../hooks/useQuery";
 
 
 const styleCalassButton =
-  "text-black rounded-none w-1/4 bg-gradient-to-br from-amber-600 to-amber-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2";
+  "text-black rounded-none w-full bg-gradient-to-br from-amber-600 to-amber-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2";
 // 1.
 const initialValues = {
   email: "",
@@ -48,7 +48,6 @@ const LoginForm = () => {
 
 
   const onSubmit =async (values) => {
-    
    try{
     const {data}= await loginUser(values)
     // console.log("data is good login user is :", data)
@@ -75,13 +74,17 @@ const LoginForm = () => {
       <form onSubmit={formik.handleSubmit} className="flex items-center justify-center w-screen flex-col">
         <Input formik={formik} name="email" label="ایمیل" />
         <Input formik={formik} name="password" label="رمز عبور" type="password"/>
-        <button
-          type="submit"
-          disabled={!formik.isValid}
-          className={styleCalassButton}
-        >
-          ورود
-        </button>
+        <Link to="/adminPage">
+        
+            <button
+              type="submit"
+              disabled={!formik.isValid}
+              className={styleCalassButton} 
+            >
+              ورود
+            </button>
+        
+        </Link>
         <div className="flex flex-row">
           {error && <h3 className="text-red-500 px-4">{error}</h3>}
           <Link to={`/singUpPage?redirect= ${redirect}`}>

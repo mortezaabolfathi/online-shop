@@ -12,6 +12,8 @@ export const products = [
     price: 120,
     offPrice: 120,
     discount: 0,
+    category:"دکور صندلی",
+    stock:5,
     image: "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p9i-600x600.jpg",
   },
   {
@@ -21,6 +23,8 @@ export const products = [
     price: 110,
     offPrice: 100,
     discount: 8,
+    category:"دکور صندلی",
+    stock:5,
     image: "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p4-600x600.jpg",
   },
   {
@@ -34,6 +38,8 @@ export const products = [
     price: 99,
     offPrice: 89,
     discount: 10,
+    category:"دکور صندلی",
+    stock:5,
     image: "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p1i-600x600.jpg",
   },
   {
@@ -47,6 +53,8 @@ export const products = [
     price: 260,
     offPrice: 220,
     discount: 15,
+    category:"دکور صندلی",
+    stock:5,
     image: "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p6-600x600.jpg",
   },
   {
@@ -60,6 +68,8 @@ export const products = [
     price: 150,
     offPrice: 150,
     discount: 0,
+    category:"دکور صندلی",
+    stock:5,
     image: "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p2-600x600.jpg",
   },
   {
@@ -73,6 +83,8 @@ export const products = [
     price: 220,
     offPrice: 200,
     discount: 13,
+    category:"دکور صندلی",
+    stock:5,
     image: "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p1-600x600.jpg",
   },
   {
@@ -86,6 +98,7 @@ export const products = [
     price: 220,
     offPrice: 200,
     discount: 13,
+     category:"دکوری مبلی",
     image :"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p26i-600x600.jpg"
   },
   {
@@ -99,6 +112,8 @@ export const products = [
     price: 220,
     offPrice: 200,
     discount: 13,
+    category:"دکوری مبلی",
+    stock:5,
     image :"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p24-600x600.jpg"
   },
   {
@@ -112,6 +127,8 @@ export const products = [
     price: 34,
     offPrice: 200,
     discount: 13,
+    category:"دکوری مبلی",
+    stock:5,
     image: "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p26-600x600.jpg"
   },
   {
@@ -125,6 +142,8 @@ export const products = [
     price: 99,
     offPrice: 200,
     discount: 13,
+    category:"دکوری مبلی",
+    stock:5,
     image:"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p6-600x600.jpg"
   },
   {
@@ -138,6 +157,8 @@ export const products = [
     price: 35,
     offPrice: 200,
     discount: 13,
+    category:"دکوری ساعت",
+    stock:5,
     image :"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p13-600x600.jpg"
   },
   {
@@ -151,6 +172,8 @@ export const products = [
     price: 65,
     offPrice: 200,
     discount: 13,
+    category:"دکوری ساعت",
+    stock:5,
     image :"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p12-600x600.jpg"
   },
   {
@@ -164,6 +187,8 @@ export const products = [
     price: 60,
     offPrice: 200,
     discount: 13,
+    category:"دکوری ساعت",
+    stock:5,
     image:"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p11-600x600.jpg"
   },
   {
@@ -177,6 +202,8 @@ export const products = [
     price: 70,
     offPrice: 200,
     discount: 13,
+    category:"دکوری ساعت",
+    stock:5,
     image :"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p10i-600x600.jpg"
   },
   {
@@ -190,6 +217,7 @@ export const products = [
     price: 31,
     offPrice: 200,
     discount: 13,
+    category:"دکوری ساعت",
     image:"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p15-600x600.jpg"
   },
   {
@@ -203,6 +231,8 @@ export const products = [
     price: 81,
     offPrice: 200,
     discount: 13,
+    category:"دکوری لامپ",
+    stock:5,
     image:"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p17-600x600.jpg"
   },
   {
@@ -216,6 +246,8 @@ export const products = [
     price: 34,
     offPrice: 200,
     discount: 13,
+    category:"دکوری لامپ",
+    stock:5,
     image:"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p16i-600x600.jpg"
   },
   {
@@ -229,6 +261,8 @@ export const products = [
     price: 120,
     offPrice: 200,
     discount: 13,
+    category:"دکوری لامپ",
+    stock:5,
     image:"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p17-600x600.jpg"
   },
 ];
