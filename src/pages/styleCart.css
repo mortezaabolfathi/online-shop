@@ -1,0 +1,111 @@
+.cartPageIsNoting{
+    height: 50vh;
+    background-color: #d1cece;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hederCart{
+    background-color: #FFa800;
+    text-align: start;
+    width: 90vw;
+    height: 60px;
+    padding-right: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.boxProductCart{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+.cartSummery{
+    background-color: #FFa800;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+   padding: 6px;
+    gap: 5px;
+}
+
+.cartSummery div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cartSummery button{
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: #101010;
+    color: white;
+    font-size: 20px;
+}
+
+
+.cartProduct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cartProduct table{
+    width: 70vw;
+    background-color: rgb(241, 240, 238);
+}
+
+.cartProduct table thead{
+    background-color: rgb(187, 181, 181);
+}
+.imageCart{
+    padding-top: 4px;
+    width: 120px;
+}
+
+.imageCart img{
+    width: 100%;
+    height: auto;
+}
+
+.boxRemove svg{
+    font-size: xxx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    color: red;
+    width: 100%;
+}
+
+.cartProduct table svg:hover{
+    cursor: pointer;
+}
+
+.boxNumber {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3px;
+}
+
+.boxNumber svg{
+   color: black;
+   font-size: xxx-large;
+}
+
+
