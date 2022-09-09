@@ -11,10 +11,12 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from "./pages/Home/HomePage";
 import CategoryProvider from "./components/category/categoryProvider";
-import AdminPage from "./pages/AdminPanel/AdminPage";
 import OffLineShop from "./pages/OffLineShop/OffLineShop";
 import FinalBuyPage from "./pages/FinalBuyPage/FinalBuyPage";
 import SelectProduct from "./pages/AdminPanel/SelectProduct";
+import SelectOrders from "./pages/AdminPanel/SelectOrders"
+import SelectPriceAndStock from "./pages/AdminPanel/SelectPriceAndStock";
+import LayOutAdmin from "./layout/LayOutAdmin";
 
 function App() {
   return (
@@ -31,11 +33,15 @@ function App() {
             <Route path="/checkOutPage" element={<LayOut> <CheckOutPage /> </LayOut>  } />
             <Route path="/singUpPage" element={<LayOut> <SingUpPage/> </LayOut>  } />
             <Route path="/loginPage" element={<LayOut> <LoginPage/> </LayOut>  } />
-            <Route path="/adminPage" element={<LayOut> <AdminPage/> </LayOut>  } />
             <Route path="/offLinShop" element={<LayOut> <OffLineShop/> </LayOut>  } />
             <Route path="/finalBuyPage" element={<LayOut> <FinalBuyPage/> </LayOut>  } />
-            <Route path="/selectProducts" element={<LayOut> <SelectProduct/> </LayOut>  } />
-            <Route path="/selectProducts/:id" element={<LayOut> <SelectProduct/> </LayOut>  } />
+            <Route path="/selectProducts" element={<SelectProduct/>} />
+            <Route path="/selectProducts/:id" element={<SelectProduct/>} />
+            <Route path="/selectOrders" element={<SelectOrders/>} />
+            <Route path="/selectPriceAndStock" element={<SelectPriceAndStock/>} />
+            <Route path="/selectPriceAndStock/:id" element={<SelectPriceAndStock/>} />
+            <Route path="/layOutAdmin" element={<LayOutAdmin/>} />
+            
           </Routes>
           
         </CartProvider>

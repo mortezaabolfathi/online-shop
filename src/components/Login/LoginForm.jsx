@@ -74,8 +74,7 @@ const LoginForm = () => {
       <form onSubmit={formik.handleSubmit} className="flex items-center justify-center w-screen flex-col">
         <Input formik={formik} name="email" label="ایمیل" />
         <Input formik={formik} name="password" label="رمز عبور" type="password"/>
-        <Link to="/adminPage">
-        
+        <Link to="/layOutAdmin">  
             <button
               type="submit"
               disabled={!formik.isValid}
