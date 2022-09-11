@@ -18,7 +18,7 @@ const Navigation = () => {
             </Link>
           </li>
           <li className="font-xl hover:text-amber-400 hover:cursor-pointer">
-            <Link to="/">خانه</Link>
+            <Link to="/" className="">خانه</Link>
           </li>
           <li className=" hover:text-amber-400 hover:cursor-pointer">
             <Link to="/productPage">محصولات</Link>
