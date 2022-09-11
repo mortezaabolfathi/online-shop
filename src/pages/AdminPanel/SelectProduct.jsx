@@ -19,7 +19,20 @@ const SelectProduct = () => {
 
     const {id}=useParams()
 
+   const handleSave=(e)=>{
+    e.preventDefault()
+    let data=new FormData(e.target)
+    console.log(data.get("category"))
+    const config = {
+        headers: { 'content-type': 'multipart/form-data' }
+        }
+        axios.post("http://localhost:3001/products",data,config)
+    }
+
+
+
    
+
     const getData=()=>{
         axios.get(`http://localhost:3001/products?_page=${id}&_limit=4`).then((res)=>{
             setProduct(res.data)
@@ -63,17 +76,17 @@ const SelectProduct = () => {
                             <th>تصویر</th>
                             <th>نام کالا</th>
                             <th>دسته بندی</th>
-                            <th>ویرایش</th>
+                            <th>حذف</th>
                         </tr>
                     </thead>
                     <tbody>
                         {product.map((item)=>{
                             return(
                         <tr className='border-b-2 border-amber-400'>
-                            <td className='w-1/6' > <img src={item.image} alt="" /></td>
+                            <td className='w-1/6' > <img src={`http://localhost:3001${item.image}`} alt="" /></td>
                             <td className='pr-9'>{item.name}</td>
                             <td className='pr-9'>{item.category}</td>
-                            <td className='pr-9'><p onClick={()=>setItemDeleteId(item.id)}> <AiFillCloseSquare className='text-4xl'/> </p></td>
+                            <td className='pr-9 hover:cursor-pointer hover:text-amber-400'><p onClick={()=>setItemDeleteId(item.id)}> <AiFillCloseSquare className='text-4xl'/> </p></td>
                         </tr>     
                             )
 
@@ -95,7 +108,7 @@ const SelectProduct = () => {
             </div>
             <Modal isOpen={modalSave} className="flex justify-center items-center w-full h-full bg-amber-400/5">
                 <div className='w-ful bg-white justify-center items-center'>
-                <ModalSave setModalSAve={setModalSAve}/>
+                <ModalSave setModalSAve={setModalSAve} handleSave={handleSave}/>
                 </div>
             </Modal>
             <Modal isOpen={modalDelete} className="flex justify-center items-center w-full h-full bg-amber-400/5">
@@ -106,7 +119,7 @@ const SelectProduct = () => {
 
                     <div className='flex flex-row gap-x-8 items-center w-full'>
                         <button className='bg-amber-400 w-1/2 p-1 hover:bg-red-600' onClick={()=> deleteHandler(idDelete)}> بله</button>
-                        <button className='bg-amber-400 w-1/2 p-1' onClick={()=>setModalDelete(false)} >خیر</button>
+                        <button className='bg-amber-400 w-1/2 p-1 hover:bg-green-500' onClick={()=>setModalDelete(false)} >خیر</button>
                     </div>
          
                     </div>
