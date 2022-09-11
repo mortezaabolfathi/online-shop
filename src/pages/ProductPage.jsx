@@ -119,13 +119,14 @@ const ProductPage = () => {
                       {checkInCart(cart,product) ? "به سبد خرید افزوده شد" : "افزودن به سبد خرید"}
                     </button>
                     <p>{product.name}</p>
-                    <p className='text-xl'>قیمت: {product.price} $</p>
+                    <p className='text-xl'>قیمت: {product.price} تومان</p>
                   </div>
                 </section>
           
             )
           })}
           </section>
+          
         </main>
      );
 }
