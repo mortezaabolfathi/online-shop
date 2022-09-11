@@ -94,18 +94,18 @@ const CartSummery = () => {
       <h3 className="text-center pb-4 text-xl">فاکتور خرید شما</h3>
       <div>
         <p>جمع فاکتور بدون  تخفیف</p>
-        <h4> ${originalTotalPrice}</h4>
+        <h4> {originalTotalPrice}تومان</h4>
       </div>
 
       <div>
         <p>تخفیف اجناس</p>
-        <h4>${originalTotalPrice-total}</h4>
+        <h4>{originalTotalPrice-total}تومان</h4>
       </div>
 
       <hr />
       <div >
         <p>مبلغ قابل پرداخت</p>
-        <h4>${total}</h4>
+        <h4>{total}تومان</h4>
       </div >
       <div className="pt-4 flex justify-center items-center">
         {/* <Link to="/singUpPage?redirect=checkOutPage" className="w-full p-2 ">
