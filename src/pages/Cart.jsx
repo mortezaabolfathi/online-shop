@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const { cart, total } = useCart();
   const dispatch = useCartActionS();
+  
   const incHandler = (cartItem) => {
     dispatch({ type: "ADD_TO_CART", payload: cartItem });
   };

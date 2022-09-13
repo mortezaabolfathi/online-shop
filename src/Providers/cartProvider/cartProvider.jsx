@@ -8,7 +8,7 @@ const initialState={
     cart:[],
     total:0
 }
-console.log(initialState.total)
+// console.log(initialState.total)
 
 const CartProvider = ({children}) => {
 

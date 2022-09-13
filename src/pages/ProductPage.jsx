@@ -31,13 +31,10 @@ const ProductPage = () => {
   },[])
 
   const changeHandlerSelect=(e)=>{
-    console.log(e.target.value);
     if(e.target.value==="All" || e.target.value===""){
-      console.log(data.products)
-      setSelectItem(data.products)
+      getData()
     }else{
-      console.log("data.products is:", data.products)
-      const filterItem=data.products.filter((item)=>item.name===e.target.value);
+      const filterItem=selectItem.filter((item)=>item.name===e.target.value);
       setSelectItem(filterItem)
     }
   }
@@ -74,6 +71,7 @@ const ProductPage = () => {
     }
   }
 
+  
   const {cart}=useCart()
 
     return ( 
@@ -110,9 +108,9 @@ const ProductPage = () => {
               
                 <section className='product' key={product.id} >
                   <div className='productImg  '>
-                  <Link to="/offLinShop"> 
-                    <img src={product.image} alt={product.name} />
-                  </Link>
+                    <Link to={`/product/${product.id}`}> 
+                      <img src={product.image} alt={product.name} />
+                    </Link>
                   </div>
                   <div>
                     <button onClick={()=>addProductInCart(product)}>

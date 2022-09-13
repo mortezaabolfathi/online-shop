@@ -1,46 +1,22 @@
 import React, { useEffect, useState } from 'react';
-// import { UserProductACtion, useProducts } from '../../components/category/categoryProvider';
+import { UserProductACtion, useProducts } from '../../components/category/categoryProvider';
+import * as data from "./../../data";
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-
-
 const styleBoxCategoryClass="flex flex-col justify-center items-center bg-gray-200 h-52	gap-y-8	hover:bg-amber-400 hover:cursor-pointer"
 const styleTitleProduct='bg-amber-400 w-1/4 h-24 absolute bottom-94 right-9 flex justify-center items-center hover:cursor-pointer'
 
 // const pData=[...data.products]
 
 const HomePage = () => {
-    // const {selectedItem}=UserProductACtion()
-    const [productNew,setProductNew]=useState([])
-    const [categoryInHomePage,setCategoryInHomePage]=useState([])
-
-    const getData=()=>{
-        axios.get("http://localhost:3001/products").then((res)=>
-        setProductNew(res.data)
-        )
-    }
-
-    const getCategory=()=>{
-        axios.get("http://localhost:3001/category").then((res)=>
-        setCategoryInHomePage(res.data))
-    }
-    useEffect(()=>{
-        getData()
-        getCategory()
-    },[])
-
-    console.log("productNew is :" ,productNew)
-    console.log("categoryshow in home page is :" ,categoryInHomePage)
-    
-
+    const {selectedItem}=UserProductACtion()
     // console.log(selectedItem)
-    const sofa=productNew.filter((item)=>item.category==="دکوری مبلی");
-    const sofaCut=sofa.splice(0,4)
-    const lamp=productNew.filter((item)=>item.category==="دکوری لامپ");
+    const sofa=data.products.filter((item)=>item.name==="مبل");
+    const sofaCut=sofa.splice(0,5)
+    const lamp=data.products.filter((item)=>item.name==="لامپ");
     const lampCut=lamp.splice(0,4)
-    const chair=productNew.filter((item)=>item.category==="دکور صندلی");
+    const chair=(data.products.filter((item)=>item.name==="صندلی"));
     const chairCut=chair.splice(0,4)
-    const clock=productNew.filter((item)=>item.category==="دکوری ساعت");    
+    const clock=data.products.filter((item)=>item.name==="ساعت");    
     const clockCut=clock.splice(0,4)
 
     return ( 
@@ -48,18 +24,35 @@ const HomePage = () => {
             <div className=' banner w-full flex justify-center items-center'>
                     <img className='w-full h-80'  src="https://img.freepik.com/free-photo/mockup-wall-dark-living-room-interior-background-with-leather-sofa-table-empty-dark-wooden-wall-3d-rendering_41470-3585.jpg?w=740&t=st=1662542426~exp=1662543026~hmac=0a07ed86deb1b6aa4fc9d863a42053631fe4471f36a196dde2f6fa1441fcdf31" alt="" />
             </div>
-            <div className=' w-full flex md:flex-row flex-col items-center justify-center md:grid grid-cols-4 gap-x-8'> 
-                {categoryInHomePage.map((item)=>{
-                    return(
-                        <div className= {styleBoxCategoryClass}>
-                            <div className='border-double'>
-                                <img src={item.image} alt="" />
-                            </div>
-                            <p>{item.name}</p>
-                        </div>
-                    )
 
-                })}               
+            <div className=' w-full flex md:flex-row flex-col items-center justify-center md:grid grid-cols-4 gap-x-8'>
+                <div className= {styleBoxCategoryClass}>
+                    <Link to={`/category/`}> 
+                        <div className='border-double' onClick={()=>selectedItem("لامپ")}>
+                            <img src="https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/i5.png" alt="" />
+                        </div>
+                        <p>لامپ</p>
+                    </Link>
+                </div>
+                <div className={styleBoxCategoryClass} onClick={()=>selectedItem("صندلی")}>
+                    <div>
+                        <img src="https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/i1.png" alt="" />
+                    </div>
+                    <p>صندلی</p>
+                </div>
+                <div className={styleBoxCategoryClass} onClick={()=>selectedItem("ساعت")}>
+                    <div>
+                        <img src="https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/i6.png" alt="" />
+                    </div>
+                    <p>ساعت</p>
+                </div>
+                <div className={styleBoxCategoryClass} onClick={()=>selectedItem("مبل")}>
+                    <div>
+                        <img src="https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/i2.png" alt="" />
+                    </div>
+                    <p>مبل</p>
+                </div>
+                
             </div>
 
             <div className="flex justify-center items-center h-32 mb-8">

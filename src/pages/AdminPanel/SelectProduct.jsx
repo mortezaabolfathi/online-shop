@@ -29,10 +29,6 @@ const SelectProduct = () => {
         axios.post("http://localhost:3001/products",data,config)
     }
 
-
-
-   
-
     const getData=()=>{
         axios.get(`http://localhost:3001/products?_page=${id}&_limit=4`).then((res)=>{
             setProduct(res.data)
@@ -40,7 +36,7 @@ const SelectProduct = () => {
             const totalP = Math.ceil(totalProducts /4);
             setTotalPage(totalP);
         })
-      }
+    }
     
       useEffect(()=>{
         getData()
@@ -81,13 +77,16 @@ const SelectProduct = () => {
                     </thead>
                     <tbody>
                         {product.map((item)=>{
+                            const sliceImageAddress=item.image.slice(0,5) 
                             return(
-                        <tr className='border-b-2 border-amber-400'>
-                            <td className='w-1/6' > <img src={`http://localhost:3001${item.image}`} alt="" /></td>
-                            <td className='pr-9'>{item.name}</td>
-                            <td className='pr-9'>{item.category}</td>
-                            <td className='pr-9 hover:cursor-pointer hover:text-amber-400'><p onClick={()=>setItemDeleteId(item.id)}> <AiFillCloseSquare className='text-4xl'/> </p></td>
-                        </tr>     
+                                <tr className='border-b-2 border-amber-400'>
+                                    <td className='w-1/6' >
+                                    {sliceImageAddress==="https" ?( <img src={item.image} alt="" /> ): (<img src={`http://localhost:3001${item.image}`} alt="" />)}
+                                    </td>
+                                    <td className='pr-9'>{item.name}</td>
+                                    <td className='pr-9'>{item.category}</td>
+                                    <td className='pr-9 hover:cursor-pointer hover:text-amber-400'><p onClick={()=>setItemDeleteId(item.id)}> <AiFillCloseSquare className='text-4xl'/> </p></td>
+                                </tr>     
                             )
 
                         })}

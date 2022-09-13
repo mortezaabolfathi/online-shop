@@ -36,8 +36,8 @@ export const UserProductACtion = () => {
     
     const selectedItem=(enterName)=>{
       setProducts(products)
-      console.log("enterName is :", enterName)
-      console.log("product is :" ,products)
+      // console.log("enterName is :", enterName)
+      // console.log("product is :" ,products)
         const categoryLamp=products.filter((item)=>item.name===enterName);
         setCopyProduct(categoryLamp)
         // console.log("categorySelect is:", categoryLamp)

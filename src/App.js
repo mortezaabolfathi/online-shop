@@ -17,6 +17,7 @@ import SelectProduct from "./pages/AdminPanel/SelectProduct";
 import SelectOrders from "./pages/AdminPanel/SelectOrders"
 import SelectPriceAndStock from "./pages/AdminPanel/SelectPriceAndStock";
 import LayOutAdmin from "./layout/LayOutAdmin";
+import Category from "./pages/Category/Category";
 
 function App() {
   return (
@@ -33,8 +34,9 @@ function App() {
             <Route path="/checkOutPage" element={<LayOut> <CheckOutPage /> </LayOut>  } />
             <Route path="/singUpPage" element={<LayOut> <SingUpPage/> </LayOut>  } />
             <Route path="/loginPage" element={<LayOut> <LoginPage/> </LayOut>  } />
-            <Route path="/offLinShop" element={<LayOut> <OffLineShop/> </LayOut>  } />
+            <Route path="/product/:id" element={<LayOut> <OffLineShop/> </LayOut>  } />
             <Route path="/finalBuyPage" element={<LayOut> <FinalBuyPage/> </LayOut>  } />
+            <Route path="/category/:category" element={<LayOut> <Category/> </LayOut>  } />
             <Route path="/selectProducts" element={<SelectProduct/>} />
             <Route path="/selectProducts/:id" element={<SelectProduct/>} />
             <Route path="/selectOrders" element={<SelectOrders/>} />

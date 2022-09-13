@@ -11,8 +11,11 @@ const SelectPriceAndStock = () => {
 
     const [product,setProduct]=useState([]);
     const [totalPage,setTotalPage]=useState(0);
+    const [inputShow,setInPutShow]=useState(false);
+    const [editedData,setEditedData]=useState([]);
 
     const {id}=useParams();
+
     const getData=()=>{
         axios.get(`http://localhost:3001/products?_page=${id}&_limit=4`).then((res)=>{
             setProduct(res.data)
@@ -25,6 +28,19 @@ const SelectPriceAndStock = () => {
       useEffect(()=>{
         getData()
       },[id])
+
+      const changeHandler=(e,id,filed)=>{
+        const {value}=e.target;
+        if(editedData.some((p)=>p.id===id)){
+            setEditedData((prv)=>{
+                return prv.map((itemP)=>itemP.id===id ? {...itemP,[filed]:value}:itemP)
+            })
+        }else{
+            setEditedData([...editedData,{id,[filed]:value}])
+        }
+        console.log(editedData);
+      }
+
 
     return ( 
         <div className='flex flex-row gap-4'>
@@ -53,8 +69,12 @@ const SelectPriceAndStock = () => {
                         return(
                     <tr className='border-b-2 border-amber-400 mt-4 h-14'>
                         <td className='pr-9'>{item.name}</td>
-                        <td className='w-1/6'> {item.price}</td>
-                        <td className='w-1/6'> {item.stock}</td>
+                        <td className='w-1/6' onClick={()=>setInPutShow(true)}>
+                          {inputShow ? <> <input type="text" onChange={(e)=>changeHandler(e,item.id,"price")} defaultValue={item.price} className="w-2/3"/> </> : <> {item.price} </>}    
+                        </td>
+                        <td className='w-1/6' onClick={()=>setInPutShow(true)}>
+                            {inputShow ? <> <input type="text" onChange={(e)=>changeHandler(e,item.id,"stock")}  defaultValue={item.stock} className="w-2/3" /> </> : <> {item.stock} </>}              
+                        </td>
                     </tr>     
                         )
 

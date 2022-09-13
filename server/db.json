@@ -14,8 +14,8 @@
           "support": "اورجینال"
         }
       ],
-      "price": 120,
-      "offPrice": 120,
+      "price": 120000,
+      "offPrice": 800,
       "discount": 0,
       "category": "دکور صندلی",
       "stock": 5,
@@ -35,33 +35,12 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 99,
-      "offPrice": 89,
+      "price": 99000,
+      "offPrice": 900,
       "discount": 10,
       "category": "دکور صندلی",
       "stock": 5,
       "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p1i-600x600.jpg"
-    },
-    {
-      "id": 4,
-      "name": "صندلی",
-      "description": [
-        {
-          "support": "گارانتی مادام العمر"
-        },
-        {
-          "support": "اورجینال"
-        },
-        {
-          "support": "ارسال رایگان"
-        }
-      ],
-      "price": 260,
-      "offPrice": 220,
-      "discount": 15,
-      "category": "دکور صندلی",
-      "stock": 5,
-      "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p6-600x600.jpg"
     },
     {
       "id": 5,
@@ -77,8 +56,8 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 150,
-      "offPrice": 150,
+      "price": 15000,
+      "offPrice": 100,
       "discount": 0,
       "category": "دکور صندلی",
       "stock": 5,
@@ -98,32 +77,12 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 220,
-      "offPrice": 200,
+      "price": 72000,
+      "offPrice": 400,
       "discount": 13,
       "category": "دکور صندلی",
       "stock": 5,
       "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p1-600x600.jpg"
-    },
-    {
-      "id": 7,
-      "name": "مبل",
-      "description": [
-        {
-          "support": "گارانتی مادام العمر"
-        },
-        {
-          "support": "اورجینال"
-        },
-        {
-          "support": "ارسال رایگان"
-        }
-      ],
-      "price": 220,
-      "offPrice": 200,
-      "discount": 13,
-      "category": "دکوری مبلی",
-      "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p26i-600x600.jpg"
     },
     {
       "id": 8,
@@ -139,7 +98,7 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 220,
+      "price": 22000,
       "offPrice": 200,
       "discount": 13,
       "category": "دکوری مبلی",
@@ -160,7 +119,7 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 34,
+      "price": 3400,
       "offPrice": 200,
       "discount": 13,
       "category": "دکوری مبلی",
@@ -181,8 +140,8 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 99,
-      "offPrice": 200,
+      "price": 99000,
+      "offPrice": 100,
       "discount": 13,
       "category": "دکوری مبلی",
       "stock": 5,
@@ -202,8 +161,8 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 35,
-      "offPrice": 200,
+      "price": 35000,
+      "offPrice": 80,
       "discount": 13,
       "category": "دکوری ساعت",
       "stock": 5,
@@ -223,8 +182,8 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 65,
-      "offPrice": 200,
+      "price": 65000,
+      "offPrice": 600,
       "discount": 13,
       "category": "دکوری ساعت",
       "stock": 5,
@@ -244,7 +203,7 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 60,
+      "price": 6000,
       "offPrice": 200,
       "discount": 13,
       "category": "دکوری ساعت",
@@ -265,8 +224,8 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 70,
-      "offPrice": 200,
+      "price": 70000,
+      "offPrice": 20,
       "discount": 13,
       "category": "دکوری ساعت",
       "stock": 5,
@@ -286,35 +245,50 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 31,
-      "offPrice": 200,
+      "price": 310000,
+      "offPrice": 20000,
       "discount": 13,
-      "category": "دکوری ساعت",
+      "category": "دکوری لامپ",
       "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p15-600x600.jpg"
     },
     {
-      "id": 16,
-      "name": "لامپ",
-      "description": [
-        {
-          "support": "گارانتی مادام العمر"
-        },
-        {
-          "support": "اورجینال"
-        },
-        {
-          "support": "ارسال رایگان"
-        }
-      ],
-      "price": 81,
-      "offPrice": 200,
-      "discount": 13,
-      "category": "دکوری لامپ",
-      "stock": 5,
-      "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p17-600x600.jpg"
+      "name": "مبل جدید",
+      "category": "دکوری مبلی",
+      "description": "",
+      "createdAt": 1662913244797,
+      "id": 16
     },
     {
       "id": 17,
+      "name": "مبل",
+      "description": [
+        {
+          "support": "گارانتی مادام العمر"
+        },
+        {
+          "support": "اورجینال"
+        },
+        {
+          "support": "ارسال رایگان"
+        }
+      ],
+      "price": 24000,
+      "offPrice": 1000,
+      "discount": 13,
+      "category": "دکوری مبلی",
+      "stock": 5,
+      "image":"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p26i-600x600.jpg"
+    },
+    {
+      "name": "asd",
+      "category": "دکوری ساعت",
+      "description": "",
+      "image": "/files/1342c9f8d9cf91f2076b2f235e787dc9",
+      "createdAt": 1662969232471,
+      "id": 18
+    },
+    {
+      "id": 19,
       "name": "لامپ",
       "description": [
         {
@@ -327,15 +301,14 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 34,
-      "offPrice": 200,
+      "price": 40000,
+      "offPrice": 1000,
       "discount": 13,
       "category": "دکوری لامپ",
-      "stock": 5,
       "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p16i-600x600.jpg"
     },
     {
-      "id": 18,
+      "id": 20,
       "name": "لامپ",
       "description": [
         {
@@ -348,13 +321,34 @@
           "support": "ارسال رایگان"
         }
       ],
-      "price": 120,
-      "offPrice": 200,
+      "price": 40000,
+      "offPrice": 1000,
       "discount": 13,
       "category": "دکوری لامپ",
-      "stock": 5,
       "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p17-600x600.jpg"
+    },
+    {
+      "id": 21,
+      "name": "لامپ",
+      "description": [
+        {
+          "support": "گارانتی مادام العمر"
+        },
+        {
+          "support": "اورجینال"
+        },
+        {
+          "support": "ارسال رایگان"
+        }
+      ],
+      "price": 47000,
+      "offPrice": 100,
+      "discount": 13,
+      "category": "دکوری لامپ",
+      "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/p19-600x600.jpg"
     }
+    
+    
   ],
   "users": [
     {
@@ -423,31 +417,31 @@
   ],
   "category": [
     {
-      "name-en": "chair",
-      "name-fa": "صندلی",
-      "createdAt": 1645019634099,
-      "icon": "fee9e902dfae7810de7d35ba33ec4c75",
+      "nameEn": "chair",
+      "name": "صندلی",
+      "category": "دکور صندلی",
+      "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/i1.png",
       "id": 1
     },
     {
-      "name-en": "lamp",
-      "name-fa": "لامپ",
-      "createdAt": 1645019634099,
-      "icon": "e4e0ddb4beb6042232d3371c52933622",
+      "nameEn": "lamp",
+      "name": "لامپ",
+      "category": "دکوری لامپ",
+      "image":"https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/i5.png",
       "id": 2
     },
     {
-      "name-en": "sofa",
-      "name-fa": "مبل",
-      "createdAt": 1645019634099,
-      "icon": "10fa3f8b1005c533ac28a2d0c692a3c3",
+      "nameEn": "sofa",
+      "name": "مبل",
+      "category": "دکوری مبلی",
+      "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/i2.png",
       "id": 3
     },
     {
-      "name-en": "clock",
-      "name-fa": "ساعت",
-      "createdAt": 1645019634099,
-      "icon": "500c5b985ac1382b877bfbba2d957b85",
+      "nameEn": "clock",
+      "name": "ساعت",
+      "category": "دکوری ساعت",
+      "image": "https://xtratheme.ir/elementor/furniture/wp-content/uploads/sites/14/2019/09/i6.png",
       "id": 4
     }
   ],
@@ -526,8 +520,8 @@
     },
     {
       "user-id": 3,
-      "status": "shipped",
-      "name": "مرتضی ابوالفتحی",
+      "status": "pending",
+      "name": "یزدان صالحی",
       "family": "ابراهیمی",
       "phone": "09913440342",
       "address": "خیابان شهید رودکی",
@@ -598,6 +592,57 @@
       "delivered-at": null,
       "createdAt": 1646876995101,
       "id": 5
+    },
+    {
+      "user-id": 1,
+      "status": "pending",
+      "name": "محمد رضا",
+      "family": "ابراهیمی",
+      "phone": "09913440342",
+      "address": "خیابان شهید رودکی",
+      "totalprice": 3450000,
+      "delivery-date": "1400/12/19",
+      "products": [
+        {
+          "productId": 20,
+          "quantity": 2,
+          "colorId": 0,
+          "GarntyId": 0
+        }
+      ],
+      "map": {
+        "lat": "35.71528",
+        "lng": "51.41667"
+      },
+      "delivered-at": null,
+      "createdAt": 1646876995101,
+      "id": 6
+    },
+    {
+      "user-id": 1,
+      "status": "pending",
+      "name": "شیما",
+      "family": "گودرزی",
+      "phone": "09913440342",
+      "address": "خیابان شهید رودکی",
+      "totalprice": 7000000,
+      "delivery-date": "1400/12/19",
+      "products": [
+        {
+          "productId": 15,
+          "quantity": 1,
+          "colorId": 0,
+          "GarntyId": 0
+        }
+      ],
+      "map": {
+        "lat": "0",
+        "lng": "0"
+      },
+      "delivered-at": null,
+      "createdAt": 1646900171395,
+      "id": 7
     }
+
   ]
 }

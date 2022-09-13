@@ -43,7 +43,7 @@ const ModalSave = ({setModalSAve,handleSave}) => {
                 </div>
             </div>
             <div className='flex flex-col items-center w-full'>
-                <button className='bg-amber-400 w-1/2 p-1' type="submit">ذخیره</button>
+                <button className='bg-amber-400 w-1/2 p-1' type="submit"  onClick={()=>setModalSAve(false)}>ذخیره</button>
             </div>
         </div>
 
