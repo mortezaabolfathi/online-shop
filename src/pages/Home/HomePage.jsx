@@ -52,9 +52,11 @@ const HomePage = () => {
                 {categoryInHomePage.map((item)=>{
                     return(
                         <div className= {styleBoxCategoryClass}>
+                            <Link to={`/category/${item.category}`}>
                             <div className='border-double'>
                                 <img src={item.image} alt="" />
                             </div>
+                            </Link>
                             <p>{item.name}</p>
                         </div>
                     )

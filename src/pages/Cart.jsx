@@ -98,20 +98,12 @@ const CartSummery = () => {
         <h4> {originalTotalPrice}تومان</h4>
       </div>
 
-      <div>
-        <p>تخفیف اجناس</p>
-        <h4>{originalTotalPrice-total}تومان</h4>
-      </div>
-
       <hr />
       <div >
         <p>مبلغ قابل پرداخت</p>
-        <h4>{total}تومان</h4>
+        <h4>{originalTotalPrice}تومان</h4>
       </div >
       <div className="pt-4 flex justify-center items-center">
-        {/* <Link to="/singUpPage?redirect=checkOutPage" className="w-full p-2 ">
-          <button className="hover:text-amber-400">وارد صفحه پرداخت شوید!</button>
-        </Link> */}
         <Link to="/finalBuyPage" className="w-full p-2">
           <button className="hover:text-amber-400">وارد صفحه پرداخت شوید!</button>
         </Link>

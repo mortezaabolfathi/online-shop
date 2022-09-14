@@ -11,6 +11,7 @@ import axios from 'axios';
 
 const ProductPage = () => {
 
+  const [ItemALL,setItemAll]=useState([])
   const [selectItem,setSelectItem]=useState([])
 
   const dispatch=useCartActionS()
@@ -23,7 +24,7 @@ const ProductPage = () => {
   
   const getData=()=>{
     axios.get("http://localhost:3001/products").then((res)=>{
-      setSelectItem(res.data)
+      setItemAll(res.data)
     })
   }
   useEffect(()=>{
@@ -31,10 +32,23 @@ const ProductPage = () => {
   },[])
 
   const changeHandlerSelect=(e)=>{
-    if(e.target.value==="All" || e.target.value===""){
+    if(e==="All" || e===""){
+      setSelectItem("")
       getData()
     }else{
-      const filterItem=selectItem.filter((item)=>item.name===e.target.value);
+      getData()
+      const filterItem=ItemALL.filter((item)=>item.name===e);
+      setSelectItem(filterItem)
+    }
+  }
+
+  const changeHandlerSelectForInput=(e)=>{
+    if(e.target.value==="All" || e.target.value===""){
+      setSelectItem("")
+      getData()
+    }else{
+      getData()
+      const filterItem=ItemALL.filter((item)=>item.name===e.target.value);
       setSelectItem(filterItem)
     }
   }
@@ -54,7 +68,7 @@ const ProductPage = () => {
         return 0
       })
       console.log(sortPrice)
-      setSelectItem(sortPrice)
+      setItemAll(sortPrice)
     }
     if(e.target.value==="highest"){
       const sortPrice=productsCLone.sort((a,b)=>{
@@ -66,7 +80,7 @@ const ProductPage = () => {
         }
         return 0
       })
-      setSelectItem(sortPrice)
+      setItemAll(sortPrice)
 
     }
   }
@@ -87,7 +101,7 @@ const ProductPage = () => {
 
             <div className='flex flex-row items-center  gap-4'>
             <label htmlFor="" className='text-amber-400'> فیلتر کردن : </label>
-                  <select onChange={(e)=>changeHandlerSelect(e)}>
+                  <select onChange={(e)=>changeHandlerSelect(e.target.value)}>
                       <option value="All">همه محصولات</option>
                       <option value="صندلی">صندلی</option>
                       <option value="ساعت">ساعت</option>
@@ -99,11 +113,20 @@ const ProductPage = () => {
           </div>
 
           <div className='bg-black w-full h-10 p-8 flex items-center gap-x-5 ' >
-          <label htmlFor="" className='text-amber-400 text-2xl'> جستجوی کالا :</label>
-            <input className='h-9 w-80' type="text" name="" id="" onChange={(e)=>changeHandlerSelect(e)} />
+            <label htmlFor="" className='text-amber-400'> جستجو:</label>
+            <input className='h-9 w-50 px-3' type="text" name="" id="" onChange={(e)=>changeHandlerSelectForInput(e)} />
+            <div className='flex md:flex-row gap-x-6 w-3/4 justify-center items-center h-10'>
+              <button className='text-white  bg-amber-400 w-1/6 p-1 hover:text-black ' onClick={()=>changeHandlerSelect("مبل")}>مبل</button>
+              <button className='text-white  bg-amber-400 w-1/6 p-1 hover:text-black ' onClick={()=>changeHandlerSelect("صندلی")}>صندلی</button>
+              <button className='text-white  bg-amber-400 w-1/6 p-1 hover:text-black ' onClick={()=>changeHandlerSelect("ساعت")}>ساعت</button>
+              <button className='text-white  bg-amber-400 w-1/6 p-1 hover:text-black ' onClick={()=>changeHandlerSelect("لامپ")}>لامپ</button>
+              <button className='text-white  bg-amber-400 w-1/6 p-1 hover:text-black ' onClick={()=>changeHandlerSelect("All")}>همه محصولات</button>
+            </div>
+          
           </div>
 
-          <section className='productList'>{selectItem.map((product)=>{
+            {selectItem.length===0 ? (
+              <section className='productList'>{ItemALL.map((product)=>{
             return (
               
                 <section className='product' key={product.id} >
@@ -123,7 +146,31 @@ const ProductPage = () => {
           
             )
           })}
-          </section>
+              </section>
+                ):(
+              <section className='productList'>{selectItem.map((product)=>{
+                return (
+                  
+                    <section className='product' key={product.id} >
+                      <div className='productImg  '>
+                        <Link to={`/product/${product.id}`}> 
+                          <img src={product.image} alt={product.name} />
+                        </Link>
+                      </div>
+                      <div>
+                        <button onClick={()=>addProductInCart(product)}>
+                          {checkInCart(cart,product) ? "به سبد خرید افزوده شد" : "افزودن به سبد خرید"}
+                        </button>
+                        <p>{product.name}</p>
+                        <p className='text-xl'>قیمت: {product.price} تومان</p>
+                      </div>
+                    </section>
+              
+                )
+              })}
+              </section>
+            ) }
+          
           
         </main>
      );
