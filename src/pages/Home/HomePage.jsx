@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 // import { UserProductACtion, useProducts } from '../../components/category/categoryProvider';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const styleBoxCategoryClass="flex flex-col justify-center items-center bg-gray-200 h-52	gap-y-8	hover:bg-amber-400 hover:cursor-pointer"
@@ -27,6 +29,7 @@ const HomePage = () => {
     useEffect(()=>{
         getData()
         getCategory()
+        AOS.init({duration:2000});
     },[])
 
     console.log("productNew is :" ,productNew)
@@ -51,13 +54,13 @@ const HomePage = () => {
             <div className=' w-full flex md:flex-row flex-col items-center justify-center md:grid grid-cols-4 gap-x-8'> 
                 {categoryInHomePage.map((item)=>{
                     return(
-                        <div className= {styleBoxCategoryClass}>
+                        <div  data-aos="flip-left" className= {styleBoxCategoryClass}>
                             <Link to={`/category/${item.category}`}>
-                            <div className='border-double'>
+                            <div data-aos="zoom-in" className='border-double'>
                                 <img src={item.image} alt="" />
                             </div>
                             </Link>
-                            <p>{item.name}</p>
+                            <p className='text-2xl'>{item.name}</p>
                         </div>
                     )
 
@@ -68,7 +71,7 @@ const HomePage = () => {
                 <h3 className="text-6xl	text-amber-400">محصولات جدید</h3>
             </div>
 
-            <div className='w-full relative flex flex-col'>
+            <div data-aos="fade-up" className='w-full relative flex flex-col'>
                 <div className='h-10 bg-black '>black</div>
                 <div className={styleTitleProduct}>
                     <p className='text-4xl text--400 text-center'>صندلی</p>
@@ -91,7 +94,7 @@ const HomePage = () => {
                     })}
                 </div>
             </div>
-            <div className='w-full relative flex flex-col'>
+            <div data-aos="fade-right" className='w-full relative flex flex-col'>
                 <div className='h-10 bg-black'>black</div>
                 <div className={styleTitleProduct} >
                     <p className='text-4xl text--400 text-center'>ساعت</p>
@@ -114,7 +117,7 @@ const HomePage = () => {
                     })}
                 </div>
             </div>
-            <div className='w-full relative flex flex-col'>
+            <div data-aos="fade-left" className='w-full relative flex flex-col'>
                 <div className='h-10 bg-black'>black</div>
                 <div className={styleTitleProduct} >
                     <p className='text-4xl text--400 text-center'>لامپ</p>
@@ -137,7 +140,7 @@ const HomePage = () => {
                     })}
                 </div>
             </div>
-            <div className='w-full relative flex flex-col'>
+            <div data-aos="fade-up" className='w-full relative flex flex-col'>
                 <div className='h-10 bg-black'>black</div>
                 <div className={styleTitleProduct} >
                     <p className='text-4xl text--400 text-center'>مبل</p>

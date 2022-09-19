@@ -6,6 +6,8 @@ import { checkInCart } from '../Utils/Utils';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
@@ -29,6 +31,7 @@ const ProductPage = () => {
   }
   useEffect(()=>{
     getData()
+    AOS.init({duration:2000});
   },[])
 
   const changeHandlerSelect=(e)=>{
@@ -128,8 +131,7 @@ const ProductPage = () => {
             {selectItem.length===0 ? (
               <section className='productList'>{ItemALL.map((product)=>{
             return (
-              
-                <section className='product' key={product.id} >
+                <section data-aos="fade-up" className='product' key={product.id} >
                   <div className='productImg  '>
                     <Link to={`/product/${product.id}`}> 
                       <img src={product.image} alt={product.name} />
@@ -151,7 +153,7 @@ const ProductPage = () => {
               <section className='productList'>{selectItem.map((product)=>{
                 return (
                   
-                    <section className='product' key={product.id} >
+                    <section data-aos="fade-up" className='product' key={product.id} >
                       <div className='productImg  '>
                         <Link to={`/product/${product.id}`}> 
                           <img src={product.image} alt={product.name} />
