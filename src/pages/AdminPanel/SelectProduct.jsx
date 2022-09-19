@@ -7,6 +7,8 @@ import LayOutAdmin from '../../layout/LayOutAdmin';
 import Modal from "react-modal";
 import ModalSave from './modal/ModalSave';
 import ModalDelete from './modal/ModalDelete';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SelectProduct = () => {
 
@@ -42,6 +44,9 @@ const SelectProduct = () => {
         getData()
       },[id])
 
+      useEffect(()=>{
+        AOS.init({duration:2000});
+      })
 
       const setItemDeleteId=(enterId)=>{
         setModalDelete(true)
@@ -106,12 +111,12 @@ const SelectProduct = () => {
 
             </div>
             <Modal isOpen={modalSave} className="flex justify-center items-center w-full h-full bg-amber-400/5">
-                <div className='w-ful bg-white justify-center items-center'>
+                <div data-aos="fade-up-right" className='w-ful bg-white justify-center items-center'>
                 <ModalSave setModalSAve={setModalSAve} handleSave={handleSave}/>
                 </div>
             </Modal>
             <Modal isOpen={modalDelete} className="flex justify-center items-center w-full h-full bg-amber-400/5">
-                <div className='w-ful bg-white justify-center items-center'>
+                <div data-aos="fade-up" className='w-ful bg-white justify-center items-center'>
 
                     <div className='flex flex-col border-4 w-80 p-8 gap-4'>
                     <p className='text-amber-400 text-2xl'> آیا از حذف کالا مطمئن هستید </p>

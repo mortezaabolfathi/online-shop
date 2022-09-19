@@ -4,6 +4,10 @@ import LayOutAdmin from '../../layout/LayOutAdmin';
 import Modal from "react-modal";
 import ModalOrder from "./modal/ModalOrder";
 import { AiFillGift, AiFillCloseSquare } from "react-icons/ai";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 const SelectPriceAndStock = () => {
 
     const [order,setOrder]=useState([])
@@ -19,6 +23,7 @@ const SelectPriceAndStock = () => {
     }
     useEffect(()=>{
         getData()
+        AOS.init({duration:2000});
     },[])
 
     const itemSelected=(enterId)=>{
@@ -100,8 +105,9 @@ const SelectPriceAndStock = () => {
                     
                 </table>        
              </div>
-             <Modal isOpen={modal} className="flex justify-center items-center w-full h-full bg-amber-400/5">
-                    <div className='w-ful bg-white justify-center items-center'>
+
+             <Modal  isOpen={modal} className="flex justify-center items-center w-full h-full bg-amber-400/5">
+                    <div data-aos="fade-up-right" className='w-ful bg-white justify-center items-center'>
                         <div className='flex flex-col border-4 w-96 p-8 gap-4'>
                             <div className='flex w-full justify-between items-center'>
                                 <p className='text-amber-400 text-2xl'> نمایش سفارشات </p>
