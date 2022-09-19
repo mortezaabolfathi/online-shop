@@ -31,7 +31,7 @@ const Navigation = () => {
 
       <nav>
         <ul className="iconHeader">
-          <Link to="/singUpPage">
+          <Link to="/loginPage">
           <li className="text-4xl hover:text-amber-400 hover:cursor-pointer"><AiOutlineUser/></li>
           </Link>
           <Link to="/cart">
