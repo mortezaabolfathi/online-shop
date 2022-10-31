@@ -32,8 +32,8 @@ const HomePage = () => {
         AOS.init({duration:2000});
     },[])
 
-    console.log("productNew is :" ,productNew)
-    console.log("categoryshow in home page is :" ,categoryInHomePage)
+    // console.log("productNew is :" ,productNew)
+    // console.log("categoryshow in home page is :" ,categoryInHomePage)
     
 
     // console.log(selectedItem)
@@ -54,7 +54,7 @@ const HomePage = () => {
             <div className=' w-full flex md:flex-row flex-col items-center justify-center md:grid grid-cols-4 gap-x-8'> 
                 {categoryInHomePage.map((item)=>{
                     return(
-                        <div  data-aos="flip-left" className= {styleBoxCategoryClass}>
+                        <div key={item.id} data-aos="flip-left" className= {styleBoxCategoryClass}>
                             <Link to={`/category/${item.category}`}>
                             <div data-aos="zoom-in" className='border-double'>
                                 <img src={item.image} alt="" />

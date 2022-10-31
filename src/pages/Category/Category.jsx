@@ -36,7 +36,7 @@ const Category = () => {
       }
 
     const filterItemCategory=selectCategory.filter((item)=>item.category===category)
-    console.log("filterItemCategory:", filterItemCategory)
+    // console.log("filterItemCategory:", filterItemCategory)
 
     return ( 
         <div className=' w-full flex md:flex-row flex-col items-center justify-center md:grid grid-cols-4 gap-x-8'> 

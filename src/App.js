@@ -26,7 +26,6 @@ function App() {
     <ToastContainer/>
       <CategoryProvider>
         <CartProvider>
-          
           <Routes>
             <Route path="/" index element={<LayOut> <Home /> </LayOut> } />
             <Route path="/productPage" element={<LayOut> < ProductPage/> </LayOut> } />

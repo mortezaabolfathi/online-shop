@@ -20,11 +20,12 @@ const SelectProduct = () => {
 
 
     const {id}=useParams()
-
+    // console.log("id get useParams:", id);
+    
    const handleSave=(e)=>{
     e.preventDefault()
     let data=new FormData(e.target)
-    console.log(data.get("category"))
+    // console.log(data.get("category"))
     const config = {
         headers: { 'content-type': 'multipart/form-data' }
         }
@@ -35,8 +36,10 @@ const SelectProduct = () => {
         axios.get(`http://localhost:3001/products?_page=${id}&_limit=4`).then((res)=>{
             setProduct(res.data)
             const totalProducts = Number(res.headers["x-total-count"]);
+            // console.log("totalProducts is :",totalProducts) //15
             const totalP = Math.ceil(totalProducts /4);
-            setTotalPage(totalP);
+            // console.log("totalP is", totalP) //4
+            setTotalPage(totalP); 
         })
     }
     
